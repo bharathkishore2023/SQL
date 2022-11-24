@@ -1,1 +1,63 @@
+It is my view that if you solve these questions you would have a good understanding and usage of various SQL commands.
 
+For now, I will have the questions.
+Later when you complete them, I will provide with the answers in this same file.
+Try to provide the output of the command too.
+So, to copy the output, it would be easier for you if you execute the commands in the command prompt.
+
+Create the following table with the following values.
+
+Database Name : sqlpractice
+Table Name : Student
+The date is in mm/dd/yyyy format.
+While storing in the database, store it in the format that our MySQL recognises: yyyy-mm-dd.
+While storing the names, it has to be given within the single quotes (').
+Date can be given in single quotes.
+Use the table name instead of TABLE while inserting into a table.
+For numerical values, the quotes is not needed.
+For most of the questions answer will be the same for everyone.
+For a few questions, it might vary depending on how you approach the question.
+
+Roll 	Sname	  Gender	Dob	       Total	 Average	Grade
+1 	Anand     	M	   05/13/2001 	407	   81.4	     B
+2 	Ajay	      M	   04/02/2001 	400	   80	       C
+3  Bharath	    M	   11/05/2000	 355	   71        D
+4	  Shivani   	F	   05/06/2001 	476  	95.2	     A
+5	  Sarchin   	M	   12/23/2001	 400	  80	       C
+6	  Dhoni	      M	   11/17/2000	 415	  83	       B
+7	  Kamala	    F	   12/05/2001	 400	  80	       C
+8 	Varun	      M	   11/11/2000	 470	  94	       A
+9 	Rekha     	F	   10/15/2000	 490	  98	       A
+===================================================================================
+1.Display name and gender of all the students
+Syntax :
+     Select Studentname,Gender from Student;
+==================================================================================
+2.Display the contents of the entire table
+Syntax :
+     Select Distinct Total from Student;
+=================================================================================
+3.Display the contents of the entire table
+Syntax:
+     Select * from Student;
+================================================================================
+4.Display roll number and name of the male students
+Syntax :
+      Select Roll,StudentName from Student where Gender='M';
+================================================================================
+5. Display the roll number and name of male students who have scored above 400.
+Syntax:
+     Select Roll,StudentName from Student where Total>400;
+================================================================================
+6.Display the details of students who have scored between 400 and 450. (Limits inclusive)
+Syntax:
+    Select Roll,StudentName from Student where Total between 400 and 450;
+================================================================================
+7.Display details of male students who have scored between 400 and 450
+Syntax:
+    Select Roll,StudentName from Student where Total between 400 and 450 and Gender='M';
+===================================================================================
+8. Display names of students who have scored the grades A, B or C from the table.
+Syntax :    
+Select Roll,StudentName from Student where Grade='A' or Grade='B' or Grade='C';
+===================================================================================
